@@ -1,0 +1,24 @@
+{
+  "format_version": "1.8.0",
+  "animations": {
+    "animation.player.first_person.swap_item": {
+      "loop": true,
+      "bones": {
+        "leftarm": {
+          "position": [
+            0.0,
+            "t.vf_now = query.life_time; v.vf_arm_off_start = (v.vf_arm_off_start ?? -1.0); v.vf_arm_off_start = query.get_equipped_item_name('off_hand') != (v.vf_arm_off_item ?? query.get_equipped_item_name('off_hand')) ? t.vf_now : v.vf_arm_off_start; v.vf_arm_off_item = query.get_equipped_item_name('off_hand'); t.vf_progress = math.clamp((t.vf_now - v.vf_arm_off_start - 0.10) / 0.22, 0.0, 1.0); t.vf_ease = t.vf_progress * t.vf_progress * (3.0 - 2.0 * t.vf_progress); return variable.is_using_vr ? ((query.get_equipped_item_name('off_hand') == 'filled_map' || query.get_equipped_item_name('off_hand') == 'shield') ? 0.0 : -10.0 * (1.0 - context.player_offhand_arm_height)) : (v.vf_arm_off_start < 0.0 ? 0.0 : -24.0 * (1.0 - t.vf_ease));",
+            0.0
+          ]
+        },
+        "rightarm": {
+          "position": [
+            0.0,
+            "t.vf_now = query.life_time; v.vf_arm_main_start = (v.vf_arm_main_start ?? -1.0); v.vf_arm_main_start = query.get_equipped_item_name('main_hand') != (v.vf_arm_main_item ?? query.get_equipped_item_name('main_hand')) ? t.vf_now : v.vf_arm_main_start; v.vf_arm_main_item = query.get_equipped_item_name('main_hand'); t.vf_progress = math.clamp((t.vf_now - v.vf_arm_main_start - 0.10) / 0.22, 0.0, 1.0); t.vf_ease = t.vf_progress * t.vf_progress * (3.0 - 2.0 * t.vf_progress); return variable.is_using_vr ? (-10.0 * (1.0 - variable.player_arm_height)) : (v.vf_arm_main_start < 0.0 ? 0.0 : -24.0 * (1.0 - t.vf_ease));",
+            0.0
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Arm Only Switch Transition",
+    "description": "Arm-only transition: full-size lowered arm, 0.10s hold and 0.22s rise. Experimental.",
+    "uuid": "d179de2f-dba6-4deb-a92b-b6e7d71650dc",
+    "version": [
+      0,
+      13,
+      0
+    ],
+    "min_engine_version": [
+      1,
+      16,
+      201
+    ]
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "64d75652-3f8e-41fa-bf31-30e2cd34a693",
+      "version": [
+        0,
+        13,
+        0
+      ]
+    }
+  ]
+}
